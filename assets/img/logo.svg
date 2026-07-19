@@ -1,0 +1,19 @@
+<svg width="720" height="120" viewBox="0 0 720 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Davis & Barrett Scaffolding Contractors Ltd">
+  <defs>
+    <style>
+      .wordmark { font-family: 'Oswald','Arial Narrow',sans-serif; font-weight: 700; }
+      .tag { font-family: 'Roboto Mono','Courier New',monospace; font-weight: 500; letter-spacing: 3px; }
+    </style>
+  </defs>
+
+  <!-- mark: skewed panel referencing scaffold bracing -->
+  <g>
+    <polygon points="10,15 96,15 80,105 -6,105" fill="#C8102E"/>
+    <polygon points="90,15 106,15 90,105 74,105" fill="#F3F1ED"/>
+    <text x="42" y="72" class="wordmark" font-size="46" fill="#FFFFFF" text-anchor="middle">DB</text>
+  </g>
+
+  <!-- wordmark -->
+  <text x="132" y="62" class="wordmark" font-size="40" fill="#FFFFFF">DAVIS &amp; BARRETT</text>
+  <text x="132" y="90" class="tag" font-size="14" fill="#C8102E">SCAFFOLDING CONTRACTORS LTD</text>
+</svg>
