@@ -1,0 +1,526 @@
+/* =========================================================
+   Davis & Barrett Scaffolding Contractors Ltd
+   Design tokens
+   ========================================================= */
+
+:root {
+  --db-black: #0D0D0C;
+  --db-charcoal: #1C1C1E;
+  --db-red: #C8102E;
+  --db-red-dark: #8C0C20;
+  --db-white: #FFFFFF;
+  --db-offwhite: #F3F1ED;
+  --db-steel: #6B6B6E;
+  --font-display: 'Oswald', 'Arial Narrow', sans-serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+  --font-mono: 'Roboto Mono', 'Courier New', monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--db-black);
+  background: var(--db-white);
+}
+
+h1, h2, h3, .hero-title, .section-title {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* =========================================================
+   Eyebrow / labels
+   ========================================================= */
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--db-red);
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 0.9rem;
+}
+
+.eyebrow-light {
+  color: var(--db-red);
+}
+
+.eyebrow-dash {
+  display: inline-block;
+  width: 28px;
+  height: 2px;
+  background: var(--db-red);
+  margin-right: 10px;
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 1.1rem;
+}
+
+.section-text {
+  color: var(--db-steel);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   Navbar
+   ========================================================= */
+
+#mainNav {
+  padding: 18px 0;
+  background: linear-gradient(to bottom, rgba(13,13,12,0.85), rgba(13,13,12,0));
+  transition: background-color 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
+}
+
+#mainNav.scrolled {
+  background-color: var(--db-black);
+  padding: 10px 0;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.35);
+}
+
+.logo-img {
+  height: 42px;
+  width: auto;
+  display: block;
+}
+
+#mainNav.scrolled .logo-img {
+  height: 36px;
+}
+
+.navbar-nav .nav-link {
+  color: var(--db-offwhite);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin: 0 10px;
+  position: relative;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--db-red);
+}
+
+/* =========================================================
+   Hero (Improved Design)
+   ========================================================= */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background-color: var(--db-black);
+  background-image: url('../images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  padding-top: 100px;
+}
+
+/* Semi-transparent dark overlay to protect text readability */
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(13,13,12,0.92) 30%, rgba(13,13,12,0.5) 100%);
+  z-index: 1;
+}
+
+.hero .container {
+  z-index: 2;
+}
+
+.hero-copy {
+  padding: 60px 0;
+}
+
+.hero-title {
+  color: var(--db-white);
+  font-size: clamp(2.8rem, 6.5vw, 4.8rem);
+  font-weight: 700;
+  line-height: 1.05;
+  margin: 0 0 1.3rem;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.hero-lead {
+  color: rgba(243,241,237,0.85);
+  font-size: 1.2rem;
+  max-width: 580px;
+  line-height: 1.7;
+}
+
+.hero-stats {
+  max-width: 560px;
+}
+
+.stat-num {
+  display: block;
+  font-family: var(--font-display);
+  color: var(--db-red);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.stat-label {
+  display: block;
+  font-family: var(--font-mono);
+  color: rgba(243,241,237,0.7);
+  font-size: 0.72rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+/* =========================================================
+   Signature element: hazard stripe divider
+   ========================================================= */
+
+.hazard-stripe {
+  height: 14px;
+  width: 100%;
+  background: repeating-linear-gradient( 45deg, var(--db-red), var(--db-red) 26px, var(--db-black) 26px, var(--db-black) 52px );
+  position: relative;
+  z-index: 3;
+}
+
+/* =========================================================
+   Buttons
+   ========================================================= */
+
+.btn {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.btn-danger {
+  background-color: var(--db-red);
+  border-color: var(--db-red);
+}
+
+.btn-danger:hover {
+  background-color: var(--db-red-dark);
+  border-color: var(--db-red-dark);
+}
+
+.btn-outline-light:hover {
+  color: var(--db-black);
+}
+
+.btn-dark {
+  background-color: var(--db-black);
+  border-color: var(--db-black);
+}
+
+/* =========================================================
+   About section
+   ========================================================= */
+
+.about-section {
+  background: var(--db-offwhite);
+  padding: 110px 0;
+}
+
+.about-collage {
+  position: relative;
+  padding: 0 24px 40px 0;
+}
+
+.collage-main {
+  width: 100%;
+  border: 4px solid var(--db-white);
+  box-shadow: 0 18px 40px rgba(13,13,12,0.18);
+}
+
+.collage-a, .collage-b {
+  position: absolute;
+  width: 52%;
+  border: 4px solid var(--db-white);
+  box-shadow: 0 14px 30px rgba(13,13,12,0.22);
+}
+
+.collage-a {
+  bottom: 8px;
+  right: -12px;
+}
+
+.collage-b {
+  display: none;
+}
+
+.check-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.6rem 0;
+}
+
+.check-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(13,13,12,0.08);
+  font-size: 1rem;
+}
+
+.check-list li i {
+  color: var(--db-white);
+  background: var(--db-red);
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  margin-top: 2px;
+}
+
+/* =========================================================
+   Services
+   ========================================================= */
+
+.services-section {
+  background: var(--db-black);
+  padding: 110px 0;
+}
+
+.service-card {
+  background: var(--db-charcoal);
+  border-top: 3px solid var(--db-red);
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+}
+
+.service-img {
+  width: 100%;
+  display: block;
+  height: 200px;
+  object-fit: cover;
+}
+
+.service-body {
+  padding: 28px 26px 32px;
+}
+
+.service-num {
+  font-family: var(--font-mono);
+  color: var(--db-red);
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+}
+
+.service-title {
+  color: var(--db-white);
+  font-size: 1.3rem;
+  margin: 10px 0 12px;
+}
+
+.service-body p {
+  color: rgba(243,241,237,0.65);
+  font-size: 0.96rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* =========================================================
+   Contact
+   ========================================================= */
+
+.contact-section {
+  padding: 110px 0;
+}
+
+.contact-info li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 16px;
+  font-size: 1rem;
+  color: var(--db-black);
+}
+
+.contact-info li i {
+  color: var(--db-red);
+  font-size: 1.1rem;
+  margin-top: 3px;
+}
+
+.contact-info a {
+  color: var(--db-black);
+}
+
+.contact-info a:hover {
+  color: var(--db-red);
+}
+
+.map-frame {
+  border: 4px solid var(--db-offwhite);
+  box-shadow: 0 14px 30px rgba(13,13,12,0.12);
+  line-height: 0;
+}
+
+.contact-form-card {
+  background: var(--db-offwhite);
+  padding: 42px;
+  border-left: 4px solid var(--db-red);
+}
+
+.contact-form-card .form-label {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--db-steel);
+}
+
+.contact-form-card .form-control, .contact-form-card .form-select {
+  border-radius: 2px;
+  border: 1px solid rgba(13,13,12,0.18);
+  padding: 0.65rem 0.8rem;
+}
+
+.contact-form-card .form-control:focus, .contact-form-card .form-select:focus {
+  border-color: var(--db-red);
+  box-shadow: 0 0 0 0.2rem rgba(200,16,46,0.15);
+}
+
+.form-status {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+.form-status.text-success {
+  color: #1a7f37 !important;
+}
+
+.form-status.text-danger {
+  color: var(--db-red) !important;
+}
+
+/* =========================================================
+   Footer
+   ========================================================= */
+
+.site-footer {
+  background: var(--db-black);
+  padding-top: 70px;
+  color: rgba(243,241,237,0.65);
+}
+
+.footer-text {
+  font-size: 0.92rem;
+  max-width: 280px;
+}
+
+.footer-heading {
+  font-family: var(--font-mono);
+  color: var(--db-white);
+  font-size: 0.78rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+  font-size: 0.92rem;
+}
+
+.footer-links a {
+  color: rgba(243,241,237,0.65);
+}
+
+.footer-links a:hover {
+  color: var(--db-red);
+}
+
+.site-footer hr {
+  border-color: rgba(243,241,237,0.15);
+}
+
+.footer-copy {
+  font-size: 0.82rem;
+  color: rgba(243,241,237,0.5);
+}
+
+.footer-social a {
+  color: var(--db-white);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(243,241,237,0.25);
+  border-radius: 50%;
+  margin-left: 8px;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.footer-social a:hover {
+  background: var(--db-red);
+  border-color: var(--db-red);
+}
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+
+@media (min-width: 768px) {
+  .collage-b {
+    display: block;
+    top: -30px;
+    left: -20px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .about-section, .services-section, .contact-section {
+    padding: 80px 0;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .contact-form-card {
+    padding: 28px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-stats .col-4 {
+    margin-bottom: 12px;
+  }
+}
+
+div {
+}
+
